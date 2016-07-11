@@ -10,54 +10,26 @@ namespace TestWork
     {
         static void Main(string[] args)
         {
-            /*CheckSign();
-            Console.ReadLine();
-        }
+            int a = 2;
+            int b = 4;
+            int c = 6;
 
-        public static bool CheckSign()
-        {*/
-            int a = -2;
-            int b = -4;
-            int c = -6;
-            //bool sign = true; 
-
-            if (a == 0 || b == 0 || c == 0) // 0 or 0 or 0
+            if (a > b && a > c)
             {
-                Console.WriteLine("Does not compute to negative or positive.");
-            }
-            else if (a > 0 && b > 0 && c > 0) // + + +
-            {
-                Console.WriteLine("The product is '+'.");
-            }
-            else if (a < 0 && b < 0 && c < 0) // - - -
-            {
-                Console.WriteLine("The product is '-'.");
-                //sign = false;
-            }
-            else if (a > 0 && b < 0 && c < 0) // + - -
-            {
-                Console.WriteLine("The product is '+'.");
-            }
-            else if (a < 0 && b < 0 && c > 0) // - - +
-            {
-                Console.WriteLine("The product is '+'.");
-            }
-            else if (a > 0 && b > 0 && c < 0) // + + -
-            {
-                Console.WriteLine("The product is '-'.");
-                //sign = false;
-            }
-            else if (a < 0 && b > 0 && c > 0) // - + +
-            {
-                Console.WriteLine("The product is '-'.");
-                //sign = false;
+                Console.WriteLine("Integer 'a' is largest.");
             }
             else
             {
-                Console.WriteLine("idk");
+                if (b > a && b > c)
+                {
+                    Console.WriteLine("Integer 'b' is largest.");
+                }
+                else
+                {
+                    Console.WriteLine("Integer 'c' is largest.");
+                }
             }
-            Console.ReadLine();
-            //return sign;
+            
         }
     }
 }
