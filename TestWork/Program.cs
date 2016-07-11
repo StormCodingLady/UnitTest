@@ -10,16 +10,16 @@ namespace TestWork
     {
         static void Main(string[] args)
         {
-            CheckSign();
+            /*CheckSign();
             Console.ReadLine();
         }
 
         public static bool CheckSign()
-        {
-            int a = 2;
+        {*/
+            int a = -2;
             int b = -4;
             int c = -6;
-            bool sign = true;
+            //bool sign = true; 
 
             if (a == 0 || b == 0 || c == 0) // 0 or 0 or 0
             {
@@ -32,7 +32,7 @@ namespace TestWork
             else if (a < 0 && b < 0 && c < 0) // - - -
             {
                 Console.WriteLine("The product is '-'.");
-                sign = false;
+                //sign = false;
             }
             else if (a > 0 && b < 0 && c < 0) // + - -
             {
@@ -45,19 +45,19 @@ namespace TestWork
             else if (a > 0 && b > 0 && c < 0) // + + -
             {
                 Console.WriteLine("The product is '-'.");
-                sign = false;
+                //sign = false;
             }
             else if (a < 0 && b > 0 && c > 0) // - + +
             {
                 Console.WriteLine("The product is '-'.");
-                sign = false;
+                //sign = false;
             }
             else
             {
                 Console.WriteLine("idk");
             }
-
-            return sign;
+            Console.ReadLine();
+            //return sign;
         }
     }
 }
