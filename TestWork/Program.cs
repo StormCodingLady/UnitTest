@@ -33,4 +33,26 @@ namespace TestWork
             Console.ReadLine();   
         }
     }
+
+    public class SnowMan
+    {
+        static private int sizeOfNose;
+        bool changeMe;
+
+        public string ThrowRock(int a, string bravo)
+        {
+            return "hello";
+        }
+
+        static public int TossStone(string hey, int b)
+        {
+            return 2;
+        }
+
+        public void GoCrazy()
+        {
+            changeMe = !changeMe;
+            return;
+        }
+    }
 }
