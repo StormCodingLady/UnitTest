@@ -10,9 +10,9 @@ namespace TestWork
     {
         static void Main(string[] args)
         {
-            int a = 2;
+            int a = 6;
             int b = 4;
-            int c = 6;
+            int c = 2;
 
             if (a > b && a > c)
             {
@@ -20,7 +20,7 @@ namespace TestWork
             }
             else
             {
-                if (b > a && b > c)
+                if (b > c)
                 {
                     Console.WriteLine("Integer 'b' is largest.");
                 }
