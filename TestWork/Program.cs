@@ -29,7 +29,8 @@ namespace TestWork
                     Console.WriteLine("Integer 'c' is largest.");
                 }
             }
-            
+
+            Console.ReadLine();   
         }
     }
 }
