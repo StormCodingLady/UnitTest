@@ -10,54 +10,102 @@ namespace TestWork
     {
         static void Main(string[] args)
         {
-            CheckSign();
+            int a = 0;
+            int b = 0;
+            int c = 0;
+            int intInput;
+            bool noError = false;
+            bool noError2 = false;
+            bool noError3 = false;
+            
+            while (noError == false)
+            {
+                Console.WriteLine("Integer 'a' equals...");
+                Console.WriteLine("(Enter an integer from the number pad)");
+                string input = Console.ReadLine();
+                bool isInt = System.Int32.TryParse(input, out intInput);
+                if (isInt)
+                {
+                    a = intInput;
+                    noError = true;
+                }
+                else
+                {
+                    Console.WriteLine("Not a valid input.");
+                    Console.WriteLine();
+                }
+
+            }
+
+            while (noError2 == false)
+            {
+                Console.WriteLine("Integer 'b' equals...");
+                Console.WriteLine("(Enter an integer from the number pad)");
+                string input = Console.ReadLine();
+                bool isInt = System.Int32.TryParse(input, out intInput);
+                if (isInt)
+                {
+                    b = intInput;
+                    noError2 = true;
+                }
+                else
+                {
+                    Console.WriteLine("Not a valid input.");
+                    Console.WriteLine();
+                }
+
+            }
+
+            while (noError3 == false)
+            {
+                Console.WriteLine("Integer 'c' equals...");
+                Console.WriteLine("(Enter an integer from the number pad)");
+                string input = Console.ReadLine();
+                bool isInt = System.Int32.TryParse(input, out intInput);
+                if (isInt)
+                {
+                    c = intInput;
+                    noError3 = true;
+                }
+                else
+                {
+                    Console.WriteLine("Not a valid input.");
+                    Console.WriteLine();
+                }
+            }
+
+
+
+            int answer = CheckValue(a, b, c);
+            missionReport(answer); //get output
             Console.ReadLine();
         }
 
-        public static bool CheckSign()
+        public static void missionReport(int answer)
         {
-            int a = 2;
-            int b = -4;
-            int c = -6;
-            bool sign = true;
+                Console.WriteLine("The highest number is '{0}'.", answer);
+        }
+        
 
-            if (a == 0 || b == 0 || c == 0) // 0 or 0 or 0
+        public static int CheckValue(int a, int b, int c)
+        {
+            if (a >= b && a >= c)
             {
-                Console.WriteLine("Does not compute to negative or positive.");
-            }
-            else if (a > 0 && b > 0 && c > 0) // + + +
-            {
-                Console.WriteLine("The product is '+'.");
-            }
-            else if (a < 0 && b < 0 && c < 0) // - - -
-            {
-                Console.WriteLine("The product is '-'.");
-                sign = false;
-            }
-            else if (a > 0 && b < 0 && c < 0) // + - -
-            {
-                Console.WriteLine("The product is '+'.");
-            }
-            else if (a < 0 && b < 0 && c > 0) // - - +
-            {
-                Console.WriteLine("The product is '+'.");
-            }
-            else if (a > 0 && b > 0 && c < 0) // + + -
-            {
-                Console.WriteLine("The product is '-'.");
-                sign = false;
-            }
-            else if (a < 0 && b > 0 && c > 0) // - + +
-            {
-                Console.WriteLine("The product is '-'.");
-                sign = false;
+                return a; 
             }
             else
             {
-                Console.WriteLine("idk");
+                if (b >= c)
+                {
+                    return b;
+                }
+                else
+                {
+                    return c;
+                }
             }
-
-            return sign;
-        }
+        }    
     }
 }
+
+
