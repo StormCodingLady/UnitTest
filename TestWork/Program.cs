@@ -76,10 +76,15 @@ namespace TestWork
 
 
 
-            CheckValue(a, b, c);
+            int answer = CheckValue(a, b, c);
+            missionReport(answer); //get output
             Console.ReadLine();
         }
 
+        public static void missionReport(int answer)
+        {
+                Console.WriteLine("The highest number is '{0}'.", answer);
+        }
         
 
         public static int CheckValue(int a, int b, int c)
@@ -99,7 +104,8 @@ namespace TestWork
                     return c;
                 }
             }
-        }
+        }    
     }
 }
+
 
