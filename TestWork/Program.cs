@@ -14,6 +14,11 @@ namespace TestWork
             int b = 4;
             int c = 2;
 
+            Console.ReadLine();   
+        }
+
+        public static bool CheckValue(int a, int b, int c)
+        {
             if (a > b && a > c)
             {
                 Console.WriteLine("Integer 'a' is largest.");
@@ -29,8 +34,6 @@ namespace TestWork
                     Console.WriteLine("Integer 'c' is largest.");
                 }
             }
-
-            Console.ReadLine();   
         }
     }
 

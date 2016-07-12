@@ -7,8 +7,18 @@ namespace TestWork.Tests
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ProductAnalysis_CheckOutcomes_LargestOfThree()
         {
+            int[,] diagnose;
+
+            diagnose  {
+                { 2, 4, 6 },
+                { 6, 4, 2 },
+                { 4, 6, 2 },
+            }
+
+
+
             bool result = Program.CheckSign();
 
             Assert.IsTrue(result);
